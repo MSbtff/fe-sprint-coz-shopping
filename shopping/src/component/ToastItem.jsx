@@ -1,6 +1,7 @@
 import React from 'react';
 import {styled} from 'styled-components';
 import {useEffect, useState} from 'react';
+
 const StyleToastItem = styled.li`
   display: flex;
   width: 100%;
@@ -40,7 +41,7 @@ export default function ToastItem({toast}) {
   return (
     <StyleToastItem className={isFading ? 'fade-out' : ''}>
       <img
-        src={`/images/${toast ? 'checkedStar.svg' : 'uncheckedStar.svg'}`}
+        src={`/img/${toast ? 'checkedStar.svg' : 'uncheckedStar.svg'}`}
         alt=""
       />
       <span>

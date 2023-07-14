@@ -51,7 +51,7 @@ function formatNumber(number) {
   return formattedNumber;
 }
 
-export default function Product({product}) {
+export default function Product({product, bookMarkHandler, modalHandler}) {
   const {
     title,
     brand_image_url,
@@ -78,11 +78,7 @@ export default function Product({product}) {
             <img
               onClick={() => bookMarkHandler(product)}
               className="star"
-              src={
-                checked
-                  ? '/images/checkedStar.svg'
-                  : '/images/uncheckedStar.svg'
-              }
+              src={checked ? '/img/checkedStar.svg' : '/img/uncheckedStar.svg'}
               alt="book mark"
             />
           </div>
@@ -112,11 +108,7 @@ export default function Product({product}) {
             <img
               onClick={() => bookMarkHandler(product)}
               className="star"
-              src={
-                checked
-                  ? '/images/checkedStar.svg'
-                  : '/images/uncheckedStar.svg'
-              }
+              src={checked ? '/img/checkedStar.svg' : '/img/uncheckedStar.svg'}
               alt="book mark"
             />
           </div>
@@ -138,11 +130,7 @@ export default function Product({product}) {
             <img
               onClick={() => bookMarkHandler(product)}
               className="star"
-              src={
-                checked
-                  ? '/images/checkedStar.svg'
-                  : '/images/uncheckedStar.svg'
-              }
+              src={checked ? '/img/checkedStar.svg' : '/img/uncheckedStar.svg'}
               alt="book mark"
             />
           </div>
@@ -167,11 +155,7 @@ export default function Product({product}) {
             <img
               onClick={() => bookMarkHandler(product)}
               className="star"
-              src={
-                checked
-                  ? '/images/checkedStar.svg'
-                  : '/images/uncheckedStar.svg'
-              }
+              src={checked ? '/img/checkedStar.svg' : '/img/uncheckedStar.svg'}
               alt="book mark"
             />
           </div>
