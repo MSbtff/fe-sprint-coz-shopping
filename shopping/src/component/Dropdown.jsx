@@ -7,16 +7,17 @@ import product from '../assets/img/product.svg';
 const DropdownWrapper = styled.nav`
   position: absolute;
   top: 70px;
-  right: -64px;
+  right: 10px;
   width: 220px;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   height: 150px;
   border-radius: 12px;
   background-color: #ffffff;
   font-size: 16px;
   box-shadow: 0px 8px 8px 0px #0000001a;
   z-index: 1;
+
   &::before {
     content: '';
     position: absolute;
@@ -33,22 +34,30 @@ const DropdownWrapper = styled.nav`
   }
 `;
 
-const WelcomeText = styled.p`
-  padding: 13px 0;
+const DropText = styled.li`
   text-align: center;
+  padding: 13px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+`;
+
+const Image = styled.img`
+  padding: 0px 10px;
 `;
 
 export default function Dropdown() {
   return (
     <DropdownWrapper>
-      <WelcomeText>000님, 안녕하세요!</WelcomeText>
-      <img src={product} alt="product">
+      <DropText>000 님 안녕하세요 </DropText>
+      <DropText>
+        <Image src={product} alt="" />
         상품리스트 페이지
-      </img>
-      <img src={bookmark} alt="bookmark">
+      </DropText>
+      <DropText>
+        <Image src={bookmark} alt="" />
         북마크 페이지
-      </img>
+      </DropText>
     </DropdownWrapper>
   );
 }

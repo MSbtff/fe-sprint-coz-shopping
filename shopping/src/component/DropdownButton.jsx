@@ -6,11 +6,11 @@ const Hamburger = styled.div`
   cursor: pointer;
 `;
 
-export default function DropdownButton(setIsOpen) {
+export default function DropdownButton({setIsOpen}) {
   const handleClick = () => setIsOpen((prev) => !prev);
   return (
-    <Hamburger>
-      <img src={hamburger} alt="hamburger" onClick={handleClick} />
+    <Hamburger onClick={handleClick}>
+      <img src={hamburger} alt="hamburger" />
     </Hamburger>
   );
 }
